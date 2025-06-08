@@ -21,7 +21,7 @@ export default function SearchBar({
   }, [debouncedSearchTerm, onSearch]);
 
   return (
-    <div className="relative w-full max-w-2xl mx-auto">
+    <div className="relative w-full max-w-2xl mx-auto mb-5">
       <div className="relative">
         <input
           type="text"

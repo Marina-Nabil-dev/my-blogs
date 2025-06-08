@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetcher, queryKeys } from "@/app/utils/api";
 
-interface PostWithDetails extends Post {
+interface PostWithDetails {
   slug: string;
   title : string;
   content : string;

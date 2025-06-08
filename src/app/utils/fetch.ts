@@ -1,11 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
+import { fetcher, queryKeys } from "@/app/utils/api";
+import { PostWithDetails } from '@/app/api/types/post';
 
 export const useFetchPosts = () => {
-  return useQuery({
-    queryKey: ["posts"],
-    queryFn: async () => {
-      const res = await fetch("/api/posts");
-      return res.json();
-    },
+  return useQuery<PostWithDetails[]>({
+    queryKey: [queryKeys.posts],
+    queryFn: () => fetcher<PostWithDetails[]>("api/posts"),
   });
 };

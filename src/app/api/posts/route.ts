@@ -1,33 +1,19 @@
-import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
+import { PostWithDetails } from '@/app/api/types/post';
+
 
 export async function GET() {
   try {
-    const posts = await prisma.post.findMany({
-      include: {
-        author: {
-          select: {
-            name: true,
-          },
-        },
-        tags: true,
-        _count: {
-          select: {
-            comments: true,
-            favorites: true,
-          },
-        },
-      },
-      orderBy: {
-        created_at: "desc",
-      },
-    });
+    const response = await fetch("https://dummyjson.com/c/63dc-8803-4502-9ca7");
 
-    return NextResponse.json(posts);
+    if (!response.ok) {
+      throw new Error(`Error fetching posts: ${response.statusText}`);
+    }
+
+    const data: PostWithDetails[] = await response.json();
+    return NextResponse.json(data);
   } catch (error) {
-    return NextResponse.json(
-      { error: error + "Failed to fetch posts" },
-      { status: 500 }
-    );
+    console.error("Failed to fetch posts:", error);
+    return NextResponse.json({ error: "Failed to fetch posts" }, { status: 500 });
   }
 }

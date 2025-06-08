@@ -1,0 +1,45 @@
+{
+  "categories": [
+    "Technology",
+    "Programming",
+    "Web Development",
+    "Mobile Development",
+    "Data Science",
+    "Artificial Intelligence",
+    "DevOps",
+    "Cloud Computing"
+  ],
+  "authors": [
+    "John Doe",
+    "Jane Smith",
+    "Alex Johnson",
+    "Sarah Williams",
+    "Michael Brown"
+  ],
+  "tags": [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "JavaScript",
+    "Node.js",
+    "Python",
+    "Machine Learning",
+    "Cloud",
+    "AWS",
+    "Docker"
+  ],
+  "readingTime": [
+    "Under 5 min",
+    "5-10 min",
+    "10-15 min",
+    "15-20 min",
+    "Over 20 min"
+  ],
+  "sortOptions": [
+    "Newest First",
+    "Oldest First",
+    "Most Popular",
+    "Most Commented",
+    "Most Liked"
+  ]
+} 

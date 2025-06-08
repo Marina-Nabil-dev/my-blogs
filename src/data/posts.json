@@ -7,6 +7,7 @@
     "published": true,
     "time_to_read": 7,
     "created_at": "2025-06-07T12:34:56Z",
+    "category": "Artificial Intelligence",
     "author_id": "author1",
     "tags": [
       { "id": "tag1", "name": "AI" },
@@ -25,6 +26,7 @@
     "published": true,
     "time_to_read": 5,
     "created_at": "2025-06-06T09:12:00Z",
+    "category": "Web Development",
     "author_id": "author2",
     "tags": [
       { "id": "tag3", "name": "Web Development" },
@@ -43,6 +45,7 @@
     "published": false,
     "time_to_read": 6,
     "created_at": "2025-06-05T15:00:00Z",
+    "category": "Blockchain",
     "author_id": "author3",
     "tags": [
       { "id": "tag5", "name": "Blockchain" },
@@ -61,6 +64,7 @@
     "published": true,
     "time_to_read": 9,
     "created_at": "2025-06-04T08:45:00Z",
+    "category": "Quantum Computing",
     "author_id": "author4",
     "tags": [
       { "id": "tag7", "name": "Quantum Computing" },
@@ -75,6 +79,7 @@
     "published": false,
     "time_to_read": 8,
     "created_at": "2025-06-03T13:22:00Z",
+    "category": "Cloud Computing",
     "author_id": "author5",
     "tags": [
       { "id": "tag9", "name": "Cloud Computing" },
@@ -98,7 +103,7 @@
   {
     "title": "Machine Learning for Everyone",
     "slug": "machine-learning-for-everyone",
-    "content": "A beginner’s guide to understanding and using machine learning.",
+    "content": "A beginner's guide to understanding and using machine learning.",
     "image": "https://source.unsplash.com/800x600/?machine,learning",
     "published": true,
     "time_to_read": 7,

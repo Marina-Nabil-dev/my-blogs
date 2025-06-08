@@ -8,11 +8,5 @@ export const queryKeys = {
   posts: "posts",
   post: (slug: string) => `post-${slug}`,
   search: (term: string) => `search-${term}`,
+  filters : "filters"
 } as const;
-
-export async function fetchPosts() {
-  const res = await fetch("https://dummyjson.com/posts?limit=10");
-  if (!res.ok) throw new Error("Failed to fetch posts");
-  return res.json();
-
-}

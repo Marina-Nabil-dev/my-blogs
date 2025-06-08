@@ -6,7 +6,6 @@ import PostCard from "@/app/components/PostCard";
 
 interface TrendingNowProps {
   posts: {
-    id: string;
     slug: string;
     title: string;
     content: string;
@@ -15,10 +14,7 @@ interface TrendingNowProps {
       name: string | null;
       image: string | null;
     };
-    _count: {
-      comments: number;
-      favorites: number;
-    };
+    time_to_read : integer
   }[];
 }
 
