@@ -11,7 +11,7 @@ export const queryKeys = {
 } as const;
 
 export async function fetchPosts() {
-  const res = await fetch("/api/posts");
+  const res = await fetch("https://dummyjson.com/posts?limit=10");
   if (!res.ok) throw new Error("Failed to fetch posts");
   return res.json();
 

@@ -15,7 +15,7 @@ export default function IndexPage() {
 
   if (error) {
     return <div>Error loading posts: {error.message}</div>;
-  }
+  }  
 
   const featuredPost = posts && posts.length > 0 ? posts[0] : null;
   const trendingPosts = posts && posts.length > 1 ? posts.slice(1, 4) : []; // Get next 3 for trending

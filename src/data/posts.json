@@ -1,0 +1,298 @@
+[
+  {
+    "title": "Exploring the Future of AI",
+    "slug": "exploring-the-future-of-ai",
+    "content": "Discover how AI is transforming industries and reshaping our world.",
+    "image": "https://source.unsplash.com/800x600/?ai,future",
+    "published": true,
+    "time_to_read": 7,
+    "created_at": "2025-06-07T12:34:56Z",
+    "author_id": "author1",
+    "tags": [
+      { "id": "tag1", "name": "AI" },
+      { "id": "tag2", "name": "Technology" }
+    ],
+    "author": {
+      "name": "Alice Johnson",
+      "image": "https://source.unsplash.com/200x200/?portrait,author1"
+    }
+  },
+  {
+    "title": "Building Modern Web Apps",
+    "slug": "building-modern-web-apps",
+    "content": "A guide to creating dynamic web applications using modern frameworks.",
+    "image": "https://source.unsplash.com/800x600/?web,development",
+    "published": true,
+    "time_to_read": 5,
+    "created_at": "2025-06-06T09:12:00Z",
+    "author_id": "author2",
+    "tags": [
+      { "id": "tag3", "name": "Web Development" },
+      { "id": "tag4", "name": "JavaScript" }
+    ],
+    "author": {
+      "name": "Bob Smith",
+      "image": "https://source.unsplash.com/200x200/?portrait,author2"
+    }
+  },
+  {
+    "title": "Demystifying Blockchain",
+    "slug": "demystifying-blockchain",
+    "content": "An introduction to blockchain technology and its applications.",
+    "image": "https://source.unsplash.com/800x600/?blockchain,technology",
+    "published": false,
+    "time_to_read": 6,
+    "created_at": "2025-06-05T15:00:00Z",
+    "author_id": "author3",
+    "tags": [
+      { "id": "tag5", "name": "Blockchain" },
+      { "id": "tag6", "name": "Technology" }
+    ],
+    "author": {
+      "name": "Charlie Brown",
+      "image": "https://source.unsplash.com/200x200/?portrait,author3"
+    }
+  },
+  {
+    "title": "The Rise of Quantum Computing",
+    "slug": "the-rise-of-quantum-computing",
+    "content": "Quantum computing is revolutionizing problem-solving and encryption.",
+    "image": "https://source.unsplash.com/800x600/?quantum,computing",
+    "published": true,
+    "time_to_read": 9,
+    "created_at": "2025-06-04T08:45:00Z",
+    "author_id": "author4",
+    "tags": [
+      { "id": "tag7", "name": "Quantum Computing" },
+      { "id": "tag8", "name": "Physics" }
+    ]
+  },
+  {
+    "title": "Introduction to Cloud Native",
+    "slug": "introduction-to-cloud-native",
+    "content": "Learn how cloud-native architecture enables scalability and resilience.",
+    "image": "https://source.unsplash.com/800x600/?cloud,architecture",
+    "published": false,
+    "time_to_read": 8,
+    "created_at": "2025-06-03T13:22:00Z",
+    "author_id": "author5",
+    "tags": [
+      { "id": "tag9", "name": "Cloud Computing" },
+      { "id": "tag10", "name": "Architecture" }
+    ]
+  },
+  {
+    "title": "Cybersecurity in the Digital Age",
+    "slug": "cybersecurity-in-the-digital-age",
+    "content": "Explore how to protect digital assets from modern cyber threats.",
+    "image": "https://source.unsplash.com/800x600/?cybersecurity",
+    "published": true,
+    "time_to_read": 6,
+    "created_at": "2025-06-02T10:10:00Z",
+    "author_id": "author1",
+    "tags": [
+      { "id": "tag11", "name": "Cybersecurity" },
+      { "id": "tag12", "name": "Technology" }
+    ]
+  },
+  {
+    "title": "Machine Learning for Everyone",
+    "slug": "machine-learning-for-everyone",
+    "content": "A beginner’s guide to understanding and using machine learning.",
+    "image": "https://source.unsplash.com/800x600/?machine,learning",
+    "published": true,
+    "time_to_read": 7,
+    "created_at": "2025-06-01T11:15:00Z",
+    "author_id": "author2",
+    "tags": [
+      { "id": "tag13", "name": "Machine Learning" },
+      { "id": "tag14", "name": "Data Science" }
+    ]
+  },
+  {
+    "title": "DevOps Best Practices",
+    "slug": "devops-best-practices",
+    "content": "How DevOps improves collaboration and speeds up software delivery.",
+    "image": "https://source.unsplash.com/800x600/?devops",
+    "published": false,
+    "time_to_read": 5,
+    "created_at": "2025-05-31T14:30:00Z",
+    "author_id": "author3",
+    "tags": [
+      { "id": "tag15", "name": "DevOps" },
+      { "id": "tag16", "name": "Automation" }
+    ],
+    "author": {
+      "name": "Alice Johnson",
+      "image": "https://source.unsplash.com/200x200/?portrait,author1"
+    }
+  },
+  {
+    "title": "The Evolution of JavaScript",
+    "slug": "the-evolution-of-javascript",
+    "content": "Explore how JavaScript has evolved to power modern web apps.",
+    "image": "https://source.unsplash.com/800x600/?javascript,code",
+    "published": true,
+    "time_to_read": 6,
+    "created_at": "2025-05-30T09:00:00Z",
+    "author_id": "author4",
+    "tags": [
+      { "id": "tag17", "name": "JavaScript" },
+      { "id": "tag18", "name": "Web Development" }
+    ]
+  },
+  {
+    "title": "Understanding Microservices",
+    "slug": "understanding-microservices",
+    "content": "A deep dive into microservices architecture and benefits.",
+    "image": "https://source.unsplash.com/800x600/?microservices",
+    "published": true,
+    "time_to_read": 8,
+    "created_at": "2025-05-29T16:45:00Z",
+    "author_id": "author5",
+    "tags": [
+      { "id": "tag19", "name": "Microservices" },
+      { "id": "tag20", "name": "Architecture" }
+    ]
+  },
+  {
+    "title": "Designing for Accessibility",
+    "slug": "designing-for-accessibility",
+    "content": "How to make websites inclusive and accessible to everyone.",
+    "image": "https://source.unsplash.com/800x600/?accessibility,design",
+    "published": true,
+    "time_to_read": 5,
+    "created_at": "2025-05-28T12:00:00Z",
+    "author_id": "author1",
+    "tags": [
+      { "id": "tag21", "name": "Accessibility" },
+      { "id": "tag22", "name": "Design" }
+    ]
+  },
+  {
+    "title": "API-First Development",
+    "slug": "api-first-development",
+    "content": "Building APIs that scale and power diverse platforms.",
+    "image": "https://source.unsplash.com/800x600/?api,development",
+    "published": false,
+    "time_to_read": 6,
+    "created_at": "2025-05-27T10:15:00Z",
+    "author_id": "author2",
+    "tags": [
+      { "id": "tag23", "name": "API Development" },
+      { "id": "tag24", "name": "REST" }
+    ]
+  },
+  {
+    "title": "GraphQL vs. REST",
+    "slug": "graphql-vs-rest",
+    "content": "Comparing the two approaches to building modern APIs.",
+    "image": "https://source.unsplash.com/800x600/?graphql,rest",
+    "published": true,
+    "time_to_read": 7,
+    "created_at": "2025-05-26T14:20:00Z",
+    "author_id": "author3",
+    "tags": [
+      { "id": "tag25", "name": "GraphQL" },
+      { "id": "tag26", "name": "REST" }
+    ]
+  },
+  {
+    "title": "Data Privacy Essentials",
+    "slug": "data-privacy-essentials",
+    "content": "Learn best practices to secure user data.",
+    "image": "https://source.unsplash.com/800x600/?data,privacy",
+    "published": true,
+    "time_to_read": 6,
+    "created_at": "2025-05-25T09:00:00Z",
+    "author_id": "author4",
+    "tags": [
+      { "id": "tag27", "name": "Data Privacy" },
+      { "id": "tag28", "name": "Security" }
+    ]
+  },
+  {
+    "title": "Next.js for Production",
+    "slug": "nextjs-for-production",
+    "content": "Optimizing Next.js apps for speed and reliability.",
+    "image": "https://source.unsplash.com/800x600/?nextjs,web",
+    "published": true,
+    "time_to_read": 8,
+    "created_at": "2025-05-24T11:45:00Z",
+    "author_id": "author5"
+  },
+  {
+    "title": "Remote Work Strategies",
+    "slug": "remote-work-strategies",
+    "content": "Tips for staying productive while working remotely.",
+    "image": "https://source.unsplash.com/800x600/?remote,work",
+    "published": false,
+    "time_to_read": 5,
+    "created_at": "2025-05-23T10:30:00Z",
+    "author_id": "author1",
+    "tags": [
+      { "id": "tag29", "name": "Remote Work" },
+      { "id": "tag30", "name": "Productivity" }
+    ]
+  },
+  {
+    "title": "The Future of 5G",
+    "slug": "the-future-of-5g",
+    "content": "How 5G is changing mobile technology and connectivity.",
+    "image": "https://source.unsplash.com/800x600/?5g,network",
+    "published": true,
+    "time_to_read": 7,
+    "created_at": "2025-05-22T09:20:00Z",
+    "author_id": "author2",
+    "tags": [
+      { "id": "tag31", "name": "5G" },
+      { "id": "tag32", "name": "Networking" }
+    ]
+  },
+  {
+    "title": "Mastering TypeScript",
+    "slug": "mastering-typescript",
+    "content": "Level up your JavaScript skills with TypeScript.",
+    "image": "https://source.unsplash.com/800x600/?typescript,code",
+    "published": true,
+    "time_to_read": 9,
+    "created_at": "2025-05-21T13:00:00Z",
+    "author_id": "author3",
+    "tags": [
+      { "id": "tag33", "name": "TypeScript" },
+      { "id": "tag34", "name": "JavaScript" }
+    ]
+  },
+  {
+    "title": "Docker Essentials",
+    "slug": "docker-essentials",
+    "content": "Containerize your apps and simplify deployment.",
+    "image": "https://source.unsplash.com/800x600/?docker,containers",
+    "published": true,
+    "time_to_read": 6,
+    "created_at": "2025-05-20T15:30:00Z",
+    "author_id": "author4",
+    "tags": [
+      { "id": "tag35", "name": "Docker" },
+      { "id": "tag36", "name": "Containers" }
+    ]
+  },
+  {
+    "title": "Effective Code Reviews",
+    "slug": "effective-code-reviews",
+    "content": "How to give and receive valuable feedback on code.",
+    "image": "https://source.unsplash.com/800x600/?code,review",
+    "published": false,
+    "time_to_read": 5,
+    "created_at": "2025-05-19T09:00:00Z",
+    "author_id": "author5",
+    "tags": [
+      { "id": "tag37", "name": "Code Review" },
+      { "id": "tag38", "name": "Feedback" }
+    ],
+    "author": {
+      "name": "John Doe",
+      "image": "https://source.unsplash.com/200x200/?portrait,author1"
+    }
+  }
+]

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { FiMessageSquare, FiHeart, FiCalendar } from "react-icons/fi";
+import {  FiHeart, FiCalendar } from "react-icons/fi";
 import { Link } from "@/i18n/navigation";
 
 interface PostCardProps {
@@ -34,9 +34,9 @@ export default function PostCard({ post }: PostCardProps) {
       <article className="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden h-full flex flex-col">
         <div className="relative w-full h-48 bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-500 overflow-hidden">
           {/* Placeholder for image if post.image exists, otherwise a generic icon */}
-          {post.author.image ? (
+          {post?.author?.image ? (
             <Image
-              src={post.author.image}
+              src={post?.author?.image || ""}
               alt={post.title}
               layout="fill"
               objectFit="cover"
@@ -55,29 +55,23 @@ export default function PostCard({ post }: PostCardProps) {
           </p>
           <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mt-auto">
             <div className="flex items-center mr-4">
-              {post.author.image && (
+              {post?.author?.image && (
                 <Image
-                  src={post.author.image}
-                  alt={post.author.name || "Author"}
+                  src={post?.author?.image || ""}
+                  alt={post?.author?.name || "Author"}
                   width={24}
                   height={24}
                   className="rounded-full mr-2"
                 />
               )}
-              <span>{post.author.name || "Anonymous"}</span>
+              <span>{post?.author?.name || "Anonymous"}</span>
             </div>
             <div className="flex items-center mr-4">
               <FiCalendar className="mr-1" />
               {/* <span>{postDate}</span> */}
             </div>
-            <div className="flex items-center mr-4">
-              <FiMessageSquare className="mr-1" />
-              <span>{post._count.comments}</span>
-            </div>
-            <div className="flex items-center">
-              <FiHeart className="mr-1" />
-              <span>{post._count.favorites}</span>
-            </div>
+            
+    
           </div>
         </div>
       </article>

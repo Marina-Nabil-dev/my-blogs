@@ -1,24 +1,21 @@
 import { useQuery } from "@tanstack/react-query";
-import { Post } from "@prisma/client";
 import { fetcher, queryKeys } from "@/app/utils/api";
 
 interface PostWithDetails extends Post {
   slug: string;
-  created_at: Date;
-  author: {
-    name: string | null;
-    image: string | null;
-  };
+  title : string;
+  content : string;
+  time_to_read : int;
+  published : bool;
+  created_at: string;
+  image : string;
   tags: { id: string; name: string }[];
-  _count: {
-    comments: number;
-    favorites: number;
-  };
+  author : {name : string , image : string};
 }
 
 export function usePosts() {
   return useQuery<PostWithDetails[]>({
     queryKey: [queryKeys.posts],
-    queryFn: () => fetcher<PostWithDetails[]>("/api/posts"),
+    queryFn: () => fetcher<PostWithDetails[]>("https://dummyjson.com/c/0419-3b64-4989-9a04"),
   });
 }
