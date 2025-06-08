@@ -1,0 +1,31 @@
+{
+  "Navbar": {
+    "title": "My Blog",
+    "home": "Home",
+    "blog": "Blog",
+    "search": "Search",
+    "favorites": "Favorites",
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "toggleMenu": "Toggle Menu"
+  },
+  "LanguageSwitcher": {
+    "title": "Change Language",
+    "languages": {
+      "en": "English",
+      "ar": "Arabic"
+    }
+  },
+  "HomePage": {
+    "loading": "Loading",
+    "featuredPost": "Featured Post",
+    "trendingNow": "Trending Now",
+    "viewAll": "View All"
+  },
+  "FeaturedPost": {
+    "featuredPost": "Featured Posts"
+  },
+  "LocaleLayout": {
+    "title": "My Blog"
+  }
+}

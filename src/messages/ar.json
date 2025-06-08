@@ -1,0 +1,31 @@
+{
+  "Navbar": {
+    "home": "الرئيسية",
+    "title": "مدونتي",
+    "blog": "المدونة",
+    "search": "البحث",
+    "favorites": "المفضلة",
+    "signIn": "تسجيل الدخول",
+    "signOut": "تسجيل الخروج",
+    "toggleMenu": "تبديل القائمة"
+  },
+  "LanguageSwitcher": {
+    "title": "تغيير اللغة",
+    "languages": {
+      "en": "الإنجليزية",
+      "ar": "العربية"
+    }
+  },
+  "HomePage": {
+    "loading": "تحميل المنشورات...",
+    "featuredPost": "منشور مميز",
+    "trendingNow": "شائع الآن",
+    "viewAll": "عرض الكل"
+  },
+  "FeaturedPost": {
+    "featuredPost": "منشور مميز"
+  },
+  "LocaleLayout": {
+    "title": "مدونتي"
+  }
+}

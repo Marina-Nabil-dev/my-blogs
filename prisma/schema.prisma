@@ -1,0 +1,78 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Users {
+  id            String       @id @default(cuid())
+  name          String?
+  email         String       @unique
+  emailVerified DateTime?
+  password      String?
+  created_at     DateTime     @default(now())
+  updated_at     DateTime     @updatedAt
+  posts         Posts[]
+  comments      Comments[]
+  favorites     Favorites[]
+  sessions      Sessions[]
+}
+
+model Sessions {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         Users     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Posts {
+  id          String     @id @default(cuid())
+  title       String
+  slug        String
+  content     String     @db.Text
+  image       String     @default("")
+  published   Boolean    @default(false)
+  time_to_read Int       
+  created_at   DateTime   @default(now())
+  updated_at   DateTime   @updatedAt
+  author_id    String
+  author      Users       @relation(fields: [author_id], references: [id])
+  comments    Comments[]
+  favorites   Favorites[]
+  tags        Tags[]
+}
+
+model Comments {
+  id        String   @id @default(cuid())
+  content   String   @db.Text
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  post_id    String
+  post      Posts     @relation(fields: [post_id], references: [id], onDelete: Cascade)
+  author_id  String
+  author    Users     @relation(fields: [author_id], references: [id], onDelete: Cascade)
+}
+
+model Favorites {
+  id        String   @id @default(cuid())
+  created_at DateTime @default(now())
+  post_id    String
+  post      Posts     @relation(fields: [post_id], references: [id], onDelete: Cascade)
+  user_id    String
+  user      Users     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@unique([post_id, user_id])
+}
+
+model Tags {
+  id    String @id @default(cuid())
+  name  String @unique
+  posts Posts[]
+}
