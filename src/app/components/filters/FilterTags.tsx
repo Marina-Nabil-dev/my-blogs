@@ -8,6 +8,7 @@ interface FilterTagsProps extends FilterProps {
 
 export default function FilterTags({ selectedValues, onChange, title, options }: FilterTagsProps) {
   const [searchQuery, setSearchQuery] = useState('');
+  const [showAllTags, setShowAllTags] = useState(false);
 
   const handleTagClick = (tag: string) => {
     const newValues = selectedValues.includes(tag)
@@ -25,7 +26,7 @@ export default function FilterTags({ selectedValues, onChange, title, options }:
         placeholder="Search tags..."
       />
       <div className="flex flex-wrap gap-2 max-h-60 overflow-y-auto">
-        {options
+        { (showAllTags ? options : options.slice(0,8))
           .filter(tag => 
             tag.toLowerCase().includes(searchQuery.toLowerCase())
           )
@@ -43,6 +44,15 @@ export default function FilterTags({ selectedValues, onChange, title, options }:
             </button>
           ))}
       </div>
+      {options.length > 5 && (
+                    <button
+                      id="show-more-categories"
+                      onClick={() => setShowAllTags(!showAllTags)}
+                      className="mt-2 text-sm text-indigo-600 hover:text-indigo-500 !rounded-button whitespace-nowrap cursor-pointer"
+                    >
+                      {showAllTags ? "Show less" : "Show more"}
+                    </button>
+                  )}
     </div>
   );
 } 

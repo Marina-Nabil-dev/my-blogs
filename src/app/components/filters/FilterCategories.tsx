@@ -8,7 +8,7 @@ interface FilterCategoriesProps extends FilterProps {
 
 export default function FilterCategories({ selectedValues, onChange, title, options }: FilterCategoriesProps) {
   const [searchQuery, setSearchQuery] = useState('');
-
+  const [showAllCategories, setShowAllCategories] = useState(false);
   const handleCheckboxChange = (category: string) => {
     const newValues = selectedValues.includes(category)
       ? selectedValues.filter(v => v !== category)
@@ -25,7 +25,10 @@ export default function FilterCategories({ selectedValues, onChange, title, opti
         placeholder="Search categories..."
       />
       <div className="space-y-2 max-h-60 overflow-y-auto">
-        {options
+        {(showAllCategories
+                      ? options
+                      : options.slice(0, 5)
+                    )
           .filter(category => 
             category.toLowerCase().includes(searchQuery.toLowerCase())
           )
@@ -42,8 +45,17 @@ export default function FilterCategories({ selectedValues, onChange, title, opti
               />
               <span>{category}</span>
             </label>
-          ))}
+          ))}    
       </div>
+      {options.length > 5 && (
+                    <button
+                      id="show-more-categories"
+                      onClick={() => setShowAllCategories(!showAllCategories)}
+                      className="mt-2 text-sm text-indigo-600 hover:text-indigo-500 !rounded-button whitespace-nowrap cursor-pointer"
+                    >
+                      {showAllCategories ? "Show less" : "Show more"}
+                    </button>
+                  )}
     </div>
   );
 } 

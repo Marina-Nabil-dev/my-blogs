@@ -53,6 +53,7 @@ export default function PostCard({ post }: PostCardProps) {
             <FiUser size={50} /> // Placeholder icon if no image
           )}
         </div>
+        </Link>
         <div className="p-6 flex flex-col flex-grow">
           <div className="flex items-center text-sm mb-3">
             {post.category && (
@@ -95,7 +96,7 @@ export default function PostCard({ post }: PostCardProps) {
             </div>
           </div>
         </div>
-      </Link>
+      
     </motion.article>
   );
 }
