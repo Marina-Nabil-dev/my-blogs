@@ -1,4 +1,4 @@
-import { PostWithDetails } from "@/app/api/types/post";
+import { PostWithDetails } from "@/app/types/post";
 
 export const filterBySearchTerm = (post: PostWithDetails, searchTerm: string) => {
   return searchTerm === "" || 
@@ -47,12 +47,12 @@ export const sortPosts = (posts: PostWithDetails[], sortBy: string) => {
         return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
       case "Oldest First":
         return new Date(a.created_at).getTime() - new Date(b.created_at).getTime();
-      case "Most Popular":
-        return (b.views || 0) - (a.views || 0);
-      case "Most Commented":
-        return (b.comments?.length || 0) - (a.comments?.length || 0);
-      case "Most Liked":
-        return (b.likes || 0) - (a.likes || 0);
+      // case "Most Popular":
+      //   return (b.views || 0) - (a.views || 0);
+      // case "Most Commented":
+      //   return (b.comments?.length || 0) - (a.comments?.length || 0);
+      // case "Most Liked":
+      //   return (b.likes || 0) - (a.likes || 0);
       default:
         return 0;
     }

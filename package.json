@@ -16,6 +16,7 @@
     "@tanstack/react-query": "^5.80.2",
     "@tanstack/react-query-devtools": "^5.80.2",
     "@types/react-motion": "^0.0.40",
+    "@uidotdev/usehooks": "^2.4.1",
     "axios": "^1.9.0",
     "clsx": "^2.1.1",
     "gray-matter": "^4.0.3",

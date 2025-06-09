@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { PostWithDetails } from '@/app/api/types/post';
+import { PostWithDetails } from '@/app/types/post';
 
 
 export async function GET() {

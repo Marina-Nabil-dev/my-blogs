@@ -9,6 +9,7 @@
     "created_at": "2025-06-07T12:34:56Z",
     "category": "Artificial Intelligence",
     "author_id": "author1",
+    "views": 1250,
     "tags": [
       { "id": "tag1", "name": "AI" },
       { "id": "tag2", "name": "Technology" }
@@ -16,7 +17,29 @@
     "author": {
       "name": "Alice Johnson",
       "image": "https://source.unsplash.com/200x200/?portrait,author1"
-    }
+    },
+    "comments": [
+      {
+        "id": "comment1",
+        "user": {
+          "name": "John Smith",
+          "image": "https://source.unsplash.com/200x200/?portrait,user1"
+        },
+        "timestamp": "2025-06-07T14:30:00Z",
+        "text": "Great insights into AI's potential impact!",
+        "replies": [
+          {
+            "id": "reply1",
+            "user": {
+              "name": "Alice Johnson",
+              "image": "https://source.unsplash.com/200x200/?portrait,author1"
+            },
+            "timestamp": "2025-06-07T15:00:00Z",
+            "text": "Thank you for your feedback!"
+          }
+        ]
+      }
+    ]
   },
   {
     "title": "Building Modern Web Apps",
@@ -28,6 +51,7 @@
     "created_at": "2025-06-06T09:12:00Z",
     "category": "Web Development",
     "author_id": "author2",
+    "views": 890,
     "tags": [
       { "id": "tag3", "name": "Web Development" },
       { "id": "tag4", "name": "JavaScript" }
@@ -35,7 +59,19 @@
     "author": {
       "name": "Bob Smith",
       "image": "https://source.unsplash.com/200x200/?portrait,author2"
-    }
+    },
+    "comments": [
+      {
+        "id": "comment2",
+        "user": {
+          "name": "Sarah Wilson",
+          "image": "https://source.unsplash.com/200x200/?portrait,user2"
+        },
+        "timestamp": "2025-06-06T10:30:00Z",
+        "text": "This helped me understand modern web development better!",
+        "replies": []
+      }
+    ]
   },
   {
     "title": "Demystifying Blockchain",
@@ -47,6 +83,7 @@
     "created_at": "2025-06-05T15:00:00Z",
     "category": "Blockchain",
     "author_id": "author3",
+    "views": 450,
     "tags": [
       { "id": "tag5", "name": "Blockchain" },
       { "id": "tag6", "name": "Technology" }
@@ -54,7 +91,29 @@
     "author": {
       "name": "Charlie Brown",
       "image": "https://source.unsplash.com/200x200/?portrait,author3"
-    }
+    },
+    "comments": [
+      {
+        "id": "comment3",
+        "user": {
+          "name": "Mike Johnson",
+          "image": "https://source.unsplash.com/200x200/?portrait,user3"
+        },
+        "timestamp": "2025-06-05T16:20:00Z",
+        "text": "Could you elaborate more on smart contracts?",
+        "replies": [
+          {
+            "id": "reply2",
+            "user": {
+              "name": "Charlie Brown",
+              "image": "https://source.unsplash.com/200x200/?portrait,author3"
+            },
+            "timestamp": "2025-06-05T16:45:00Z",
+            "text": "I'll cover smart contracts in detail in my next article!"
+          }
+        ]
+      }
+    ]
   },
   {
     "title": "The Rise of Quantum Computing",
@@ -66,9 +125,26 @@
     "created_at": "2025-06-04T08:45:00Z",
     "category": "Quantum Computing",
     "author_id": "author4",
+    "views": 780,
     "tags": [
       { "id": "tag7", "name": "Quantum Computing" },
       { "id": "tag8", "name": "Physics" }
+    ],
+    "author": {
+      "name": "David Wilson",
+      "image": "https://source.unsplash.com/200x200/?portrait,author4"
+    },
+    "comments": [
+      {
+        "id": "comment4",
+        "user": {
+          "name": "Emma Davis",
+          "image": "https://source.unsplash.com/200x200/?portrait,user4"
+        },
+        "timestamp": "2025-06-04T09:30:00Z",
+        "text": "Fascinating read! How soon do you think quantum computers will be mainstream?",
+        "replies": []
+      }
     ]
   },
   {
@@ -81,10 +157,15 @@
     "created_at": "2025-06-03T13:22:00Z",
     "category": "Cloud Computing",
     "author_id": "author5",
+    "views": 320,
     "tags": [
       { "id": "tag9", "name": "Cloud Computing" },
       { "id": "tag10", "name": "Architecture" }
-    ]
+    ],
+    "author": {
+      "name": "Eva Martinez",
+      "image": "https://source.unsplash.com/200x200/?portrait,author5"
+    }
   },
   {
     "title": "Cybersecurity in the Digital Age",
@@ -94,10 +175,38 @@
     "published": true,
     "time_to_read": 6,
     "created_at": "2025-06-02T10:10:00Z",
+    "category": "Cybersecurity",
     "author_id": "author1",
+    "views": 1560,
     "tags": [
       { "id": "tag11", "name": "Cybersecurity" },
       { "id": "tag12", "name": "Technology" }
+    ],
+    "author": {
+      "name": "Alice Johnson",
+      "image": "https://source.unsplash.com/200x200/?portrait,author1"
+    },
+    "comments": [
+      {
+        "id": "comment5",
+        "user": {
+          "name": "Tom Brown",
+          "image": "https://source.unsplash.com/200x200/?portrait,user5"
+        },
+        "timestamp": "2025-06-02T11:20:00Z",
+        "text": "Great article! Would love to see more content about zero-trust security.",
+        "replies": [
+          {
+            "id": "reply3",
+            "user": {
+              "name": "Alice Johnson",
+              "image": "https://source.unsplash.com/200x200/?portrait,author1"
+            },
+            "timestamp": "2025-06-02T11:45:00Z",
+            "text": "Thanks! I'll definitely cover zero-trust security in a future post."
+          }
+        ]
+      }
     ]
   },
   {
@@ -108,11 +217,17 @@
     "published": true,
     "time_to_read": 7,
     "created_at": "2025-06-01T11:15:00Z",
+    "category": "Machine Learning",
     "author_id": "author2",
+    "views": 2100,
     "tags": [
       { "id": "tag13", "name": "Machine Learning" },
       { "id": "tag14", "name": "Data Science" }
-    ]
+    ],
+    "author": {
+      "name": "Bob Smith",
+      "image": "https://source.unsplash.com/200x200/?portrait,author2"
+    }
   },
   {
     "title": "DevOps Best Practices",
@@ -122,15 +237,29 @@
     "published": false,
     "time_to_read": 5,
     "created_at": "2025-05-31T14:30:00Z",
+    "category": "DevOps",
     "author_id": "author3",
+    "views": 680,
     "tags": [
       { "id": "tag15", "name": "DevOps" },
       { "id": "tag16", "name": "Automation" }
     ],
     "author": {
-      "name": "Alice Johnson",
-      "image": "https://source.unsplash.com/200x200/?portrait,author1"
-    }
+      "name": "Charlie Brown",
+      "image": "https://source.unsplash.com/200x200/?portrait,author3"
+    },
+    "comments": [
+      {
+        "id": "comment6",
+        "user": {
+          "name": "Lisa Chen",
+          "image": "https://source.unsplash.com/200x200/?portrait,user6"
+        },
+        "timestamp": "2025-05-31T15:45:00Z",
+        "text": "This helped streamline our deployment process!",
+        "replies": []
+      }
+    ]
   },
   {
     "title": "The Evolution of JavaScript",
@@ -140,11 +269,17 @@
     "published": true,
     "time_to_read": 6,
     "created_at": "2025-05-30T09:00:00Z",
+    "category": "JavaScript",
     "author_id": "author4",
+    "views": 1750,
     "tags": [
       { "id": "tag17", "name": "JavaScript" },
       { "id": "tag18", "name": "Web Development" }
-    ]
+    ],
+    "author": {
+      "name": "David Wilson",
+      "image": "https://source.unsplash.com/200x200/?portrait,author4"
+    }
   },
   {
     "title": "Understanding Microservices",
@@ -154,10 +289,38 @@
     "published": true,
     "time_to_read": 8,
     "created_at": "2025-05-29T16:45:00Z",
+    "category": "Microservices",
     "author_id": "author5",
+    "views": 920,
     "tags": [
       { "id": "tag19", "name": "Microservices" },
       { "id": "tag20", "name": "Architecture" }
+    ],
+    "author": {
+      "name": "Eva Martinez",
+      "image": "https://source.unsplash.com/200x200/?portrait,author5"
+    },
+    "comments": [
+      {
+        "id": "comment7",
+        "user": {
+          "name": "Alex Turner",
+          "image": "https://source.unsplash.com/200x200/?portrait,user7"
+        },
+        "timestamp": "2025-05-29T17:30:00Z",
+        "text": "Great explanation of service boundaries!",
+        "replies": [
+          {
+            "id": "reply4",
+            "user": {
+              "name": "Eva Martinez",
+              "image": "https://source.unsplash.com/200x200/?portrait,author5"
+            },
+            "timestamp": "2025-05-29T18:00:00Z",
+            "text": "Thank you! Service boundaries are indeed crucial for microservices success."
+          }
+        ]
+      }
     ]
   },
   {
@@ -169,6 +332,7 @@
     "time_to_read": 5,
     "created_at": "2025-05-28T12:00:00Z",
     "author_id": "author1",
+    "category": "Accessibility",
     "tags": [
       { "id": "tag21", "name": "Accessibility" },
       { "id": "tag22", "name": "Design" }
@@ -181,11 +345,32 @@
     "image": "https://source.unsplash.com/800x600/?api,development",
     "published": false,
     "time_to_read": 6,
+    "category": "API Development",
     "created_at": "2025-05-27T10:15:00Z",
     "author_id": "author2",
     "tags": [
       { "id": "tag23", "name": "API Development" },
       { "id": "tag24", "name": "REST" }
+    ],
+    "comments": [
+      {
+        "id": "comment5",
+        "user": {
+          "name": "Alice Johnson",
+          "image": "https://source.unsplash.com/200x200/?portrait,user5"
+        },
+        "timestamp": "2025-05-27T11:30:00Z",
+        "text": "This is a great concept for API development. Keep it up!"
+      },
+      {
+        "id": "comment8",
+        "user": {
+          "name": "Bob Smith",
+          "image": "https://source.unsplash.com/200x200/?portrait,user8"
+        },
+        "timestamp": "2025-05-27T12:45:00Z",
+        "text": "I agree! API-first development is a game-changer in modern web development."
+      }
     ]
   },
   {
@@ -195,11 +380,23 @@
     "image": "https://source.unsplash.com/800x600/?graphql,rest",
     "published": true,
     "time_to_read": 7,
+    "category": "API Development",
     "created_at": "2025-05-26T14:20:00Z",
     "author_id": "author3",
     "tags": [
       { "id": "tag25", "name": "GraphQL" },
       { "id": "tag26", "name": "REST" }
+    ],
+    "comments": [
+      {
+        "id": "comment6",
+        "user": {
+          "name": "John Doe",
+          "image": "https://source.unsplash.com/200x200/?portrait,user6"
+        },
+        "timestamp": "2025-05-26T15:00:00Z",
+        "text": "I completely agree with your comparison. GraphQL is a great choice for modern APIs."
+      }
     ]
   },
   {
@@ -214,6 +411,17 @@
     "tags": [
       { "id": "tag27", "name": "Data Privacy" },
       { "id": "tag28", "name": "Security" }
+    ],
+    "comments": [
+      {
+        "id": "comment7",
+        "user": {
+          "name": "Jane Smith",
+          "image": "https://source.unsplash.com/200x200/?portrait,user7"
+        },
+        "timestamp": "2025-05-25T10:30:00Z",
+        "text": "Great article! I'm learning a lot about data privacy."
+      }
     ]
   },
   {
@@ -233,6 +441,7 @@
     "image": "https://source.unsplash.com/800x600/?remote,work",
     "published": false,
     "time_to_read": 5,
+    "category": "Remote Work",
     "created_at": "2025-05-23T10:30:00Z",
     "author_id": "author1",
     "tags": [
@@ -247,6 +456,7 @@
     "image": "https://source.unsplash.com/800x600/?5g,network",
     "published": true,
     "time_to_read": 7,
+    "category": "5G",
     "created_at": "2025-05-22T09:20:00Z",
     "author_id": "author2",
     "tags": [

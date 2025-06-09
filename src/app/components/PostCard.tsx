@@ -4,24 +4,10 @@ import Image from "next/image";
 import { FiClock, FiUser } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
+import { PostWithDetails } from "../types/post";
 
 interface PostCardProps {
-  post: {
-    slug: string;
-    title: string;
-    created_at: string;
-    author: {
-      name: string | null;
-      image: string | null;
-    };
-    tags : {
-      id :string,
-      name :string
-    }
-    category: string;
-    time_to_read: string;
-    image: string; // Assuming an image URL for the card header
-  };
+  post : PostWithDetails
 }
 
 export default function PostCard({ post }: PostCardProps) {
@@ -37,11 +23,11 @@ export default function PostCard({ post }: PostCardProps) {
       animate={{ opacity: 1, scale: 1 }}
       whileHover={{ scale: 1.02 }}
       transition={{ duration: 0.3 }}
-      className="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden h-full flex flex-col"
+      className="flex flex-col h-full overflow-hidden transition-shadow duration-300 bg-white rounded-lg shadow-md dark:bg-gray-800 hover:shadow-lg"
     >
-      <Link href={`/blog/${post.slug}`} className="block">
-        <div className="relative w-full h-48 bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-500 overflow-hidden">
-          {post.imageUrl ? (
+      <Link href={`/post/${post.slug}`} className="block">
+        <div className="relative flex items-center justify-center w-full h-48 overflow-hidden text-gray-500 bg-gray-200 dark:bg-gray-700">
+          {post.image ? (
             <Image
               src={post.image}
               alt={post.title}
@@ -54,31 +40,31 @@ export default function PostCard({ post }: PostCardProps) {
           )}
         </div>
         </Link>
-        <div className="p-6 flex flex-col flex-grow">
-          <div className="flex items-center text-sm mb-3">
+        <div className="flex flex-col flex-grow p-6">
+          <div className="flex items-center mb-3 text-sm">
             {post.category && (
               <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-100">
                 {post.category}
               </span>
             )}
-            {post.readingTime && (
+            {post.time_to_read && (
               <div className="flex items-center text-gray-500 dark:text-gray-400">
                 <FiClock className="mr-1" />
                 <span>{post.time_to_read} min read</span>
               </div>
             )}
           </div>
-          <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white line-clamp-2">
+          <h3 className="mb-3 text-xl font-semibold text-gray-900 dark:text-white line-clamp-2">
             {post.title}
           </h3>
-            <ul className="flex flex-wrap gap-2 text-gray-700 dark:text-gray-300 text-sm mb-4 flex-grow line-clamp-3">
+            <ul className="flex flex-wrap flex-grow gap-2 mb-4 text-sm text-gray-700 dark:text-gray-300 line-clamp-3">
               {post.tags && post.tags.length > 0 && post.tags.map((tag) => (
-                <li key={tag.id} className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 px-3 py-1 rounded-full text-sm font-medium transition-colors">
+                <li key={tag.id} className="px-3 py-1 text-sm font-medium text-gray-700 transition-colors bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600">
                   {tag.name}
                 </li>
               ))}
             </ul>
-          <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mt-auto">
+          <div className="flex items-center mt-auto text-sm text-gray-500 dark:text-gray-400">
             <div className="flex items-center mr-4">
               {/* {post?.author?.image && (
                 <Image
@@ -86,7 +72,7 @@ export default function PostCard({ post }: PostCardProps) {
                   alt={post?.author?.name || "Author"}
                   width={24}
                   height={24}
-                  className="rounded-full mr-2"
+                  className="mr-2 rounded-full"
                 />
               )} */}
               <span>{post?.author?.name || "Anonymous"}</span>
