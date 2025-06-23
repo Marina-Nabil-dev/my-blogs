@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "name": "John Doe",
+    "avatar": "",
+    "bio": "Full-stack developer with 8+ years of experience in React, Node.js, and modern web technologies.",
+    "location": "San Francisco, CA",
+    "joinDate": "2020-03-15",
+    "postsCount": "2",
+    "followersCount": "250",
+    "website": "https :/johndoe.dev",
+    "twitter": "johndoe",
+    "github": "johndoe",
+    "linkedin": "https://linkedin.com/in/johndoe",
+    "expertise": ["React", "TypeScript", "Node.js", "GraphQL", "AWS"]
+  }
+]

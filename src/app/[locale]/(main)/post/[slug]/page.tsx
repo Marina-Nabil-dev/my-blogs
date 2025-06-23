@@ -12,7 +12,7 @@ interface BlogPostPageProps {
   };
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
+export default function PostPage({ params }: BlogPostPageProps) {
   const { slug } = use(params);
 
   const { data: post, isLoading, error } = useQuery({
