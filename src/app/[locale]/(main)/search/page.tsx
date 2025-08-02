@@ -6,7 +6,7 @@ import { useState, useCallback, useEffect, useRef, useMemo } from "react";
 import SearchBar from "@/app/components/search/SearchBar";
 import SearchResultsList from "@/app/components/search/SearchResultsList";
 import Filters from './../../../components/filters/Filters';
-import { PostWithDetails } from "@/app/api/types/post";
+import { PostWithDetails } from "@/app/types/post";
 import { fetcher } from "@/app/utils/api";
 import { 
   filterBySearchTerm, 
@@ -42,14 +42,16 @@ interface SearchPageProps {
   initialFilters?: Partial<FilterState>;
 }
 
+
+
 // Error Fallback Component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
-  <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
-    <h2 className="text-red-800 font-semibold">Something went wrong:</h2>
-    <pre className="text-red-600 mt-2">{error.message}</pre>
+  <div className="p-4 bg-red-50 rounded-lg border border-red-200">
+    <h2 className="font-semibold text-red-800">Something went wrong:</h2>
+    <pre className="mt-2 text-red-600">{error.message}</pre>
     <button
       onClick={resetErrorBoundary}
-      className="mt-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
+      className="px-4 py-2 mt-4 text-white bg-red-600 rounded hover:bg-red-700"
     >
       Try again
     </button>
@@ -59,10 +61,10 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
 // Loading Skeleton Component
 const SearchSkeleton = () => (
   <div className="space-y-4">
-    <Skeleton className="h-12 w-full" />
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <Skeleton className="w-full h-12" />
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
       {[...Array(6)].map((_, i) => (
-        <Skeleton key={i} className="h-48 w-full" />
+        <Skeleton key={i} className="w-full h-48" />
       ))}
     </div>
   </div>
@@ -83,7 +85,7 @@ export default function SearchPage({ initialFilters }: SearchPageProps) {
   const [currentPage, setCurrentPage] = useState(1);
   const observerRef = useRef<IntersectionObserver | null>(null);
   const loadingRef = useRef(false);
-  const searchTimeoutRef = useRef<NodeJS.Timeout>();
+  const searchTimeoutRef = useRef<NodeJS.Timeout | undefined>(undefined);
 
   // Fetch posts with error handling
   const { 
@@ -110,12 +112,13 @@ export default function SearchPage({ initialFilters }: SearchPageProps) {
 
   // Optimized filtered and sorted posts
   const filteredAndSortedPosts = useMemo(() => {
+    
     if (!allPosts) return [];
     
     const filtered = allPosts.filter(post => 
       filterFunctions.every(filterFn => filterFn(post))
     );
-
+    
     return sortPosts(filtered, activeFilters.sortBy);
   }, [allPosts, filterFunctions, activeFilters.sortBy]);
 
@@ -179,12 +182,10 @@ export default function SearchPage({ initialFilters }: SearchPageProps) {
 
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
-      <div className="container mx-auto mt-20 px-4 py-8 flex flex-col md:flex-row gap-6">
-        <aside className="w-full md:w-64 flex-shrink-0">
+      <div className="container flex flex-col gap-6 px-4 py-8 mx-auto mt-20 md:flex-row">
+        <aside className="flex-shrink-0 w-full md:w-64">
           <Filters 
-            onFiltersChange={handleFiltersChange} 
-            posts={allPosts} 
-            isLoading={isLoading}
+            onFiltersChange={handleFiltersChange}
           />
         </aside>
         <main className="flex-grow">
@@ -194,11 +195,10 @@ export default function SearchPage({ initialFilters }: SearchPageProps) {
           ) : (
             <>
               <SearchResultsList 
-                results={displayedPosts} 
-                isLoading={isLoading}
+                results={displayedPosts}
               />
               {displayedPosts.length < filteredAndSortedPosts.length && (
-                <div id="load-more-trigger" className="h-10 w-full" />
+                <div id="load-more-trigger" className="w-full h-10" />
               )}
             </>
           )}

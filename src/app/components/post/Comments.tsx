@@ -18,13 +18,13 @@ export function Comments({ postSlug, comments }: CommentsProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // TODO: Implement comment submission
-    console.log('Submitting comment:', newComment);
+    console.log('Submitting comment for post:', postSlug, newComment);
   };
   
   return (
-    <section className="w-full max-w-4xl px-4 py-8 mx-auto">
+    <section className="px-4 py-8 mx-auto w-full max-w-4xl">
       <div className="space-y-8">
-        <div className="flex items-center justify-between">
+        <div className="flex justify-between items-center">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
             Comments ({comments?.length})
           </h2>
@@ -41,7 +41,7 @@ export function Comments({ postSlug, comments }: CommentsProps) {
                 id="name"
                 value={newComment.name}
                 onChange={(e) => setNewComment({ ...newComment, name: e.target.value })}
-                className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-primary focus:ring-primary"
+                className="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
                 required
               />
             </div>
@@ -54,7 +54,7 @@ export function Comments({ postSlug, comments }: CommentsProps) {
                 id="email"
                 value={newComment.email}
                 onChange={(e) => setNewComment({ ...newComment, email: e.target.value })}
-                className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-primary focus:ring-primary"
+                className="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
                 required
               />
             </div>
@@ -68,13 +68,13 @@ export function Comments({ postSlug, comments }: CommentsProps) {
               rows={4}
               value={newComment.content}
               onChange={(e) => setNewComment({ ...newComment, content: e.target.value })}
-              className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-primary focus:ring-primary"
+              className="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
               required
             />
           </div>
           <button
             type="submit"
-            className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md shadow-sm bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+            className="inline-flex justify-center px-4 py-2 text-sm font-medium text-white rounded-md border border-transparent shadow-sm bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
           >
             Post Comment
           </button>
@@ -85,7 +85,7 @@ export function Comments({ postSlug, comments }: CommentsProps) {
             <div key={comment.id} className="p-6 bg-white rounded-lg shadow-sm dark:bg-gray-800">
               <div className="flex items-start space-x-4">
                 <div className="flex-1 min-w-0">
-                  <div className="flex items-center justify-between">
+                  <div className="flex justify-between items-center">
                     <p className="text-sm font-medium text-gray-900 dark:text-white">
                       {comment.user.name}
                     </p>

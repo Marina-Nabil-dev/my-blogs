@@ -77,13 +77,13 @@ export default function Filters({ onFiltersChange }: FiltersProps) {
 
   if (isLoading) {
     return (
-      <div className="w-64 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
-        <div className="animate-pulse space-y-4">
-          <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4"></div>
+      <div className="p-4 w-64 bg-white rounded-lg shadow-md dark:bg-gray-800">
+        <div className="space-y-4 animate-pulse">
+          <div className="w-3/4 h-4 bg-gray-200 rounded dark:bg-gray-700"></div>
           <div className="space-y-2">
-            <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded"></div>
-            <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded"></div>
-            <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded"></div>
+            <div className="h-4 bg-gray-200 rounded dark:bg-gray-700"></div>
+            <div className="h-4 bg-gray-200 rounded dark:bg-gray-700"></div>
+            <div className="h-4 bg-gray-200 rounded dark:bg-gray-700"></div>
           </div>
         </div>
       </div>
@@ -92,7 +92,7 @@ export default function Filters({ onFiltersChange }: FiltersProps) {
 
   if (error) {
     return (
-      <div className="w-64 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
+      <div className="p-4 w-64 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <div className="text-red-500 dark:text-red-400">
           Error loading filters. Please try again later.
         </div>
@@ -104,10 +104,10 @@ export default function Filters({ onFiltersChange }: FiltersProps) {
     <motion.div
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
-      className="w-64 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md"
+      className="p-4 w-64 bg-white rounded-lg shadow-md dark:bg-gray-800"
     >
       <div className="mb-6">
-        <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">Filters</h2>
+        <h2 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">Filters</h2>
         <SortBy
           selectedValue={sortBy}
           onChange={(value) => handleFilterChange('sortBy', value)}

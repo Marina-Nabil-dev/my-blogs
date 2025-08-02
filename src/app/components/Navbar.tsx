@@ -75,18 +75,18 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-md shadow-sm"
+          ? "shadow-sm backdrop-blur-md bg-background/80"
           : "bg-background"
       }`}
     >
-      <div className="container mx-auto px-4 py-3">
+      <div className="container px-4 py-3 mx-auto">
         <div className="flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-primary">
           {t("title")}
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-5">
+          <div className="hidden items-center space-x-5 md:flex">
             <ul className="flex items-center space-x-6">
               {navLinks.map((link) => (
                 <NavLink key={link.href} {...link} />
@@ -96,19 +96,19 @@ export default function Navbar() {
               <LocaleSwitcherSelect />
               <ThemeSwitcher />
               {status === "loading" ? (
-                <div className="w-8 h-8 bg-gray-200 dark:bg-gray-700 rounded-full animate-pulse" />
+                <div className="w-8 h-8 bg-gray-200 rounded-full animate-pulse dark:bg-gray-700" />
               ) : session ? (
                 <button
                   onClick={() => signOut()}
                   title={t("signOut")}
-                  className="hover:text-primary transition-colors"
+                  className="transition-colors hover:text-primary"
                 >
                   <FiLogOut size={22} />
                 </button>
               ) : (
                 <Link
                   href="/signin"
-                  className="flex items-center space-x-1 hover:text-primary transition-colors"
+                  className="flex items-center space-x-1 transition-colors hover:text-primary"
                 >
                   <FiLogIn size={22} />
                   <span>{t("signIn")}</span>
@@ -119,7 +119,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 hover:text-primary transition-colors"
+            className="p-2 transition-colors md:hidden hover:text-primary"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label={t("toggleMenu")}
           >
@@ -143,13 +143,13 @@ export default function Navbar() {
                     <NavLink key={link.href} {...link} />
                   ))}
                 </ul>
-                <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
+                <div className="flex justify-between items-center pt-4 border-t border-gray-200 dark:border-gray-700">
                   <LocaleSwitcherSelect />
                   <ThemeSwitcher />
                   {status === "authenticated" ? (
                     <button
                       onClick={() => signOut()}
-                      className="flex items-center space-x-2 hover:text-primary transition-colors"
+                      className="flex items-center space-x-2 transition-colors hover:text-primary"
                     >
                       <FiLogOut size={20} />
                       <span>{t("signOut")}</span>
@@ -157,7 +157,7 @@ export default function Navbar() {
                   ) : (
                     <Link
                       href="/signin"
-                      className="flex items-center space-x-2 hover:text-primary transition-colors"
+                      className="flex items-center space-x-2 transition-colors hover:text-primary"
                     >
                       <FiLogIn size={20} />
                       <span>{t("signIn")}</span>

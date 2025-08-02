@@ -2,6 +2,7 @@ export interface FilterProps {
   selectedValues: string[];
   onChange: (values: string[]) => void;
   title: string;
+  options: string[];
 }
 
 export interface SortByProps {

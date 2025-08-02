@@ -8,6 +8,12 @@ export const metadata: Metadata = generateMetadata({
   image: "/images/search-og.jpg",
 });
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export default function SearchLayout({
   children,
 }: {
