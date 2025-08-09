@@ -28,12 +28,15 @@ export default async function RootLayout({
       dir={locale === "en" ? "ltr" : "rtl"}
       className="h-full"
     >
+      <head>
+        <title>My Blog</title>
+      </head>
       <body className={clsx(inter.className, "flex h-full flex-col")}>
-      <NextIntlClientProvider locale={locale}>
+        <NextIntlClientProvider locale={locale}>
           <Providers>
             <Navbar />
-        {children}
-        <Footer />
+            {children}
+            <Footer />
           </Providers>
         </NextIntlClientProvider>
       </body>

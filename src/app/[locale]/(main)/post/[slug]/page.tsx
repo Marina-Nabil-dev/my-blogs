@@ -1,25 +1,30 @@
 "use client";
-import {use} from "react";
-import { BlogPostHeader } from '@/app/components/post/BlogPostHeader';
-import { useQuery } from '@tanstack/react-query';
-import { getPostBySlug } from '@/app/api/posts/apis';
-import {Comments} from "@/app/components/post/Comments"
+import { use } from "react";
+import { BlogPostHeader } from "@/app/components/post/BlogPostHeader";
+import { useQuery } from "@tanstack/react-query";
+import { getPostBySlug } from "@/app/api/posts/apis";
+import { Comments } from "@/app/components/post/Comments";
+import { RelatedPosts } from "@/app/components/post/RelatedPosts";
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string;
     locale: string;
-  };
+  }>;
 }
 
 export default function PostPage({ params }: BlogPostPageProps) {
-  const { slug } = use(params);
+  const { slug } = use(params) as { slug: string; locale: string };
 
-  const { data: post, isLoading, error } = useQuery({
-    queryKey: ['post', slug],
+  const {
+    data: post,
+    isLoading,
+    error,
+  } = useQuery({
+    queryKey: ["post", slug],
     queryFn: async () => {
       const result = await getPostBySlug(slug);
-      if (!result) throw new Error('Post not found');
+      if (!result) throw new Error("Post not found");
       return result;
     },
   });
@@ -34,8 +39,8 @@ export default function PostPage({ params }: BlogPostPageProps) {
         <BlogPostHeader
           title={post.title}
           author={{
-            name: post.author.name || 'Anonymous',
-            avatar: post.author.image || '/default-avatar.png'
+            name: post.author.name || "Anonymous",
+            avatar: post.author.image || "/default-avatar.png",
           }}
           publishedAt={post.created_at}
           readTime={`${post.time_to_read} min read`}
@@ -43,15 +48,17 @@ export default function PostPage({ params }: BlogPostPageProps) {
           featuredImage={post.image}
           tags={post.tags}
         />
-        
-        <div className="w-full max-w-4xl px-4 py-8 mx-auto">
-          <div className="prose dark:prose-invert max-w-none">
+
+        <div className="px-4 py-8 mx-auto w-full max-w-4xl">
+          <div className="max-w-none prose dark:prose-invert">
             {post.content}
           </div>
         </div>
-        <Comments postSlug={post.slug} comments={post.comments}/>
-
+        <Comments postSlug={post.slug} comments={post.comments} />
       </article>
+      <div className="w-1/3" style={{ width: "300px" }}>
+        <RelatedPosts post={post} />
+      </div>
     </main>
   );
 }

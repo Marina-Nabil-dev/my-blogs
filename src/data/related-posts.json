@@ -1,0 +1,109 @@
+{
+  "related_posts": {
+    "getting-started-with-nextjs": [
+      "the-evolution-of-javascript",
+      "typescript-best-practices",
+      "building-responsive-layouts"
+    ],
+    "react-hooks-guide": [
+      "getting-started-with-nextjs",
+      "state-management-redux",
+      "component-optimization"
+    ],
+    "typescript-best-practices": [
+      "getting-started-with-nextjs",
+      "javascript-es6-features",
+      "code-quality-eslint"
+    ],
+    "building-responsive-layouts": [
+      "css-grid-flexbox",
+      "mobile-first-design",
+      "getting-started-with-nextjs"
+    ],
+    "state-management-redux": [
+      "react-hooks-guide",
+      "context-api-guide",
+      "performance-optimization"
+    ],
+    "component-optimization": [
+      "react-hooks-guide",
+      "performance-optimization",
+      "memory-management"
+    ],
+    "javascript-es6-features": [
+      "typescript-best-practices",
+      "modern-javascript-patterns",
+      "async-await-promises"
+    ],
+    "code-quality-eslint": [
+      "typescript-best-practices",
+      "testing-jest-react",
+      "code-review-best-practices"
+    ],
+    "css-grid-flexbox": [
+      "building-responsive-layouts",
+      "modern-css-techniques",
+      "animation-transitions"
+    ],
+    "building-modern-web-apps": [
+      "demystifying-blockchain",
+      "the-rise-of-quantum-computing",
+      "introduction-to-cloud-native"
+    ],
+    "context-api-guide": [
+      "state-management-redux",
+      "react-hooks-guide",
+      "component-patterns"
+    ],
+    "performance-optimization": [
+      "component-optimization",
+      "state-management-redux",
+      "web-vitals-metrics"
+    ],
+    "memory-management": [
+      "component-optimization",
+      "performance-optimization",
+      "garbage-collection-js"
+    ],
+    "modern-javascript-patterns": [
+      "javascript-es6-features",
+      "functional-programming-js",
+      "design-patterns-js"
+    ],
+    "async-await-promises": [
+      "javascript-es6-features",
+      "error-handling-js",
+      "api-integration-fetch"
+    ],
+    "testing-jest-react": [
+      "code-quality-eslint",
+      "unit-testing-strategies",
+      "integration-testing"
+    ],
+    "code-review-best-practices": [
+      "code-quality-eslint",
+      "git-workflow-strategies",
+      "team-collaboration"
+    ],
+    "modern-css-techniques": [
+      "css-grid-flexbox",
+      "sass-scss-guide",
+      "css-variables"
+    ],
+    "animation-transitions": [
+      "css-grid-flexbox",
+      "javascript-animations",
+      "performance-css"
+    ],
+    "ux-design-principles": [
+      "mobile-first-design",
+      "user-research-methods",
+      "design-systems"
+    ],
+    "accessibility-web-apps": [
+      "mobile-first-design",
+      "semantic-html",
+      "screen-reader-testing"
+    ]
+  }
+}

@@ -123,9 +123,24 @@ export default function SearchPage({ initialFilters }: SearchPageProps) {
   }, [allPosts, filterFunctions, activeFilters.sortBy]);
 
   // Optimized displayed posts with virtualization consideration
+  
   const displayedPosts = useMemo(() => {
+    // If no filters are applied, show all posts
+    const hasActiveFilters = activeFilters.categories.length > 0 || 
+                           activeFilters.authors.length > 0 || 
+                           activeFilters.tags.length > 0 || 
+                           activeFilters.readingTime.length > 0 || 
+                           (activeFilters.dateRange.start || activeFilters.dateRange.end) ||
+                           searchTerm;
+    
+    if (!hasActiveFilters) {
+      return filteredAndSortedPosts
+    }
+    
     return filteredAndSortedPosts.slice(0, currentPage * POSTS_PER_LOAD);
-  }, [filteredAndSortedPosts, currentPage]);
+  }, [filteredAndSortedPosts, currentPage, activeFilters, searchTerm]);
+
+  
 
   // Debounced search handler
   const handleSearch = useCallback((term: string) => {

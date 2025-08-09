@@ -1,19 +1,21 @@
 import { NextResponse } from "next/server";
-import { PostWithDetails } from '@/app/types/post';
-
+import { PostWithDetails } from "@/app/types/post";
+import postsData from "@/data/posts.json";
 
 export async function GET() {
   try {
-    const response = await fetch("https://dummyjson.com/c/63dc-8803-4502-9ca7");
+    const posts: PostWithDetails[] = postsData as unknown as PostWithDetails[];
+    // const posts = await fetch("https://fakerapi.it/api/v2/books?_quantity=6");
+    // console.log(posts);
 
-    if (!response.ok) {
-      throw new Error(`Error fetching posts: ${response.statusText}`);
-    }
+    // if (!posts.ok) throw new Error("Failed to fetch data");
 
-    const data: PostWithDetails[] = await response.json();
-    return NextResponse.json(data);
+    return NextResponse.json(posts);
   } catch (error) {
     console.error("Failed to fetch posts:", error);
-    return NextResponse.json({ error: "Failed to fetch posts" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Failed to fetch posts" },
+      { status: 500 }
+    );
   }
 }

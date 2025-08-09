@@ -3,7 +3,7 @@
     "title": "Exploring the Future of AI",
     "slug": "exploring-the-future-of-ai",
     "content": "        <h2>Introduction</h2>    <p>React is a powerful JavaScript library for building user interfaces. In this comprehensive guide, we'll explore the fundamentals of React development and help you build your first component.</p>        <h3>What is React?</h3>    <p>React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called \"components\".</p>        <h3>Setting Up Your Development Environment</h3>    <p>Before we dive into React, let's set up our development environment:</p>    <ul>      <li>Install Node.js and npm</li>      <li>Create a new React application using Create React App</li>      <li>Install a code editor like VS Code</li>    </ul>        <h3>Your First Component</h3>    <p>Let's create a simple React component:</p>    <pre><code>function Welcome(props) {  return <h1>Hello, {props.name}!</h1>;}</code></pre>        <h3>Conclusion</h3>    <p>React provides a solid foundation for building modern web applications. With its component-based architecture and powerful ecosystem, you can create scalable and maintainable applications.</p>",
-    "image": "/images/posts/ai-future.jpg",
+    "image": "https://picsum.photos/200/300",
     "published": true,
     "time_to_read": 7,
     "created_at": "2025-06-07T12:34:56Z",
@@ -45,7 +45,7 @@
     "title": "Building Modern Web Apps",
     "slug": "building-modern-web-apps",
     "content": "A guide to creating dynamic web applications using modern frameworks.",
-    "image": "/images/posts/web-development.jpg",
+    "image": "https://picsum.photos/200/300",
     "published": true,
     "time_to_read": 5,
     "created_at": "2025-06-06T09:12:00Z",
@@ -77,7 +77,7 @@
     "title": "Demystifying Blockchain",
     "slug": "demystifying-blockchain",
     "content": "An introduction to blockchain technology and its applications.",
-    "image": "/images/posts/blockchain.jpg",
+    "image": "https://picsum.photos/200/300",
     "published": false,
     "time_to_read": 6,
     "created_at": "2025-06-05T15:00:00Z",
@@ -119,7 +119,7 @@
     "title": "The Rise of Quantum Computing",
     "slug": "the-rise-of-quantum-computing",
     "content": "Quantum computing is revolutionizing problem-solving and encryption.",
-    "image": "https://source.unsplash.com/800x600/?quantum,computing",
+    "image": "https://picsum.photos/200/300",
     "published": true,
     "time_to_read": 9,
     "created_at": "2025-06-04T08:45:00Z",
@@ -132,14 +132,14 @@
     ],
     "author": {
       "name": "David Wilson",
-      "image": "https://source.unsplash.com/200x200/?portrait,author4"
+      "image": "https://picsum.photos/200/300"
     },
     "comments": [
       {
         "id": "comment4",
         "user": {
           "name": "Emma Davis",
-          "image": "https://source.unsplash.com/200x200/?portrait,user4"
+          "image": "https://picsum.photos/200/300"
         },
         "timestamp": "2025-06-04T09:30:00Z",
         "text": "Fascinating read! How soon do you think quantum computers will be mainstream?",
@@ -151,7 +151,7 @@
     "title": "Introduction to Cloud Native",
     "slug": "introduction-to-cloud-native",
     "content": "Learn how cloud-native architecture enables scalability and resilience.",
-    "image": "https://source.unsplash.com/800x600/?cloud,architecture",
+    "image": "https://picsum.photos/200/300",
     "published": false,
     "time_to_read": 8,
     "created_at": "2025-06-03T13:22:00Z",
@@ -164,14 +164,14 @@
     ],
     "author": {
       "name": "Eva Martinez",
-      "image": "https://source.unsplash.com/200x200/?portrait,author5"
+      "image": "https://picsum.photos/200/300"
     }
   },
   {
     "title": "Cybersecurity in the Digital Age",
     "slug": "cybersecurity-in-the-digital-age",
     "content": "Explore how to protect digital assets from modern cyber threats.",
-    "image": "https://source.unsplash.com/800x600/?cybersecurity",
+    "image": "https://picsum.photos/200/300",
     "published": true,
     "time_to_read": 6,
     "created_at": "2025-06-02T10:10:00Z",
@@ -184,14 +184,14 @@
     ],
     "author": {
       "name": "Alice Johnson",
-      "image": "https://source.unsplash.com/200x200/?portrait,author1"
+      "image": "https://picsum.photos/200/300"
     },
     "comments": [
       {
         "id": "comment5",
         "user": {
           "name": "Tom Brown",
-          "image": "https://source.unsplash.com/200x200/?portrait,user5"
+          "image": "https://picsum.photos/200/300"
         },
         "timestamp": "2025-06-02T11:20:00Z",
         "text": "Great article! Would love to see more content about zero-trust security.",
@@ -200,7 +200,7 @@
             "id": "reply3",
             "user": {
               "name": "Alice Johnson",
-              "image": "https://source.unsplash.com/200x200/?portrait,author1"
+              "image": "https://picsum.photos/200/300"
             },
             "timestamp": "2025-06-02T11:45:00Z",
             "text": "Thanks! I'll definitely cover zero-trust security in a future post."
@@ -213,7 +213,7 @@
     "title": "Machine Learning for Everyone",
     "slug": "machine-learning-for-everyone",
     "content": "A beginner's guide to understanding and using machine learning.",
-    "image": "https://source.unsplash.com/800x600/?machine,learning",
+    "image": "https://picsum.photos/200/300",
     "published": true,
     "time_to_read": 7,
     "created_at": "2025-06-01T11:15:00Z",
@@ -226,14 +226,14 @@
     ],
     "author": {
       "name": "Bob Smith",
-      "image": "https://source.unsplash.com/200x200/?portrait,author2"
+      "image": "https://picsum.photos/200/300"
     }
   },
   {
     "title": "DevOps Best Practices",
     "slug": "devops-best-practices",
     "content": "How DevOps improves collaboration and speeds up software delivery.",
-    "image": "https://source.unsplash.com/800x600/?devops",
+    "image": "https://picsum.photos/200/300",
     "published": false,
     "time_to_read": 5,
     "created_at": "2025-05-31T14:30:00Z",
@@ -246,14 +246,14 @@
     ],
     "author": {
       "name": "Charlie Brown",
-      "image": "https://source.unsplash.com/200x200/?portrait,author3"
+      "image": "https://picsum.photos/200/300"
     },
     "comments": [
       {
         "id": "comment6",
         "user": {
           "name": "Lisa Chen",
-          "image": "https://source.unsplash.com/200x200/?portrait,user6"
+          "image": "https://picsum.photos/200/300"
         },
         "timestamp": "2025-05-31T15:45:00Z",
         "text": "This helped streamline our deployment process!",
@@ -265,7 +265,7 @@
     "title": "The Evolution of JavaScript",
     "slug": "the-evolution-of-javascript",
     "content": "Explore how JavaScript has evolved to power modern web apps.",
-    "image": "https://source.unsplash.com/800x600/?javascript,code",
+    "image": "https://picsum.photos/200/300",
     "published": true,
     "time_to_read": 6,
     "created_at": "2025-05-30T09:00:00Z",
@@ -278,14 +278,14 @@
     ],
     "author": {
       "name": "David Wilson",
-      "image": "https://source.unsplash.com/200x200/?portrait,author4"
+      "image": "https://picsum.photos/200/300"
     }
   },
   {
     "title": "Understanding Microservices",
     "slug": "understanding-microservices",
     "content": "A deep dive into microservices architecture and benefits.",
-    "image": "https://source.unsplash.com/800x600/?microservices",
+    "image": "https://picsum.photos/200/300",
     "published": true,
     "time_to_read": 8,
     "created_at": "2025-05-29T16:45:00Z",
@@ -298,14 +298,14 @@
     ],
     "author": {
       "name": "Eva Martinez",
-      "image": "https://source.unsplash.com/200x200/?portrait,author5"
+      "image": "https://picsum.photos/200/300"
     },
     "comments": [
       {
         "id": "comment7",
         "user": {
           "name": "Alex Turner",
-          "image": "https://source.unsplash.com/200x200/?portrait,user7"
+          "image": "https://picsum.photos/200/300"
         },
         "timestamp": "2025-05-29T17:30:00Z",
         "text": "Great explanation of service boundaries!",
@@ -314,7 +314,7 @@
             "id": "reply4",
             "user": {
               "name": "Eva Martinez",
-              "image": "https://source.unsplash.com/200x200/?portrait,author5"
+              "image": "https://picsum.photos/200/300"
             },
             "timestamp": "2025-05-29T18:00:00Z",
             "text": "Thank you! Service boundaries are indeed crucial for microservices success."
@@ -327,7 +327,7 @@
     "title": "Designing for Accessibility",
     "slug": "designing-for-accessibility",
     "content": "How to make websites inclusive and accessible to everyone.",
-    "image": "https://source.unsplash.com/800x600/?accessibility,design",
+    "image": "https://picsum.photos/200/300",
     "published": true,
     "time_to_read": 5,
     "created_at": "2025-05-28T12:00:00Z",
