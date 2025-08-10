@@ -35,7 +35,6 @@ export async function getRelatedPosts(
     // Find the actual posts from the slugs
     let relatedPosts = posts.filter((post) => relatedSlugs.includes(post.slug));
     console.log(relatedSlugs);
-    console.log(relatedPosts);
 
     // If category filter is specified, apply it
     if (category) {
@@ -55,7 +54,6 @@ export async function getRelatedPosts(
 
       relatedPosts = [...relatedPosts, ...additionalPosts];
     }
-    console.log(relatedPosts);
 
     return relatedPosts.slice(0, limit);
   } catch (error) {

@@ -23,7 +23,8 @@
         "id": "comment1",
         "user": {
           "name": "John Smith",
-          "image": "/images/users/john-smith.jpg"
+          "image": "/images/users/john-smith.jpg",
+          "no_of_posts": 4
         },
         "timestamp": "2025-06-07T14:30:00Z",
         "text": "Great insights into AI's potential impact!",
@@ -58,7 +59,9 @@
     ],
     "author": {
       "name": "Bob Smith",
-      "image": "/images/authors/bob-smith.jpg"
+      "image": "/images/authors/bob-smith.jpg",
+      "no_of_posts": 33,
+      "bio": "Cloud computing is revolutionizing problem-solving and encryption."
     },
     "comments": [
       {
@@ -90,7 +93,9 @@
     ],
     "author": {
       "name": "Charlie Brown",
-      "image": "/images/authors/charlie-brown.jpg"
+      "image": "/images/authors/charlie-brown.jpg",
+      "no_of_posts": 23,
+      "bio": "Cloud computing is revolutionizing problem-solving and encryption."
     },
     "comments": [
       {
@@ -132,7 +137,9 @@
     ],
     "author": {
       "name": "David Wilson",
-      "image": "https://picsum.photos/200/300"
+      "image": "https://picsum.photos/200/300",
+      "no_of_posts": 23,
+      "bio": "Quantum computing is revolutionizing problem-solving and encryption."
     },
     "comments": [
       {
@@ -164,7 +171,9 @@
     ],
     "author": {
       "name": "Eva Martinez",
-      "image": "https://picsum.photos/200/300"
+      "image": "https://picsum.photos/200/300",
+      "no_of_posts": 10,
+      "bio": "Cloud computing is revolutionizing problem-solving and encryption."
     }
   },
   {
@@ -184,7 +193,9 @@
     ],
     "author": {
       "name": "Alice Johnson",
-      "image": "https://picsum.photos/200/300"
+      "image": "https://picsum.photos/200/300",
+      "no_of_posts": 2,
+      "bio": "Cloud computing is revolutionizing problem-solving and encryption."
     },
     "comments": [
       {
@@ -226,7 +237,9 @@
     ],
     "author": {
       "name": "Bob Smith",
-      "image": "https://picsum.photos/200/300"
+      "image": "https://picsum.photos/200/300",
+      "no_of_posts": 3,
+      "bio": "Cloud computing is revolutionizing problem-solving and encryption."
     }
   },
   {
@@ -246,7 +259,9 @@
     ],
     "author": {
       "name": "Charlie Brown",
-      "image": "https://picsum.photos/200/300"
+      "image": "https://picsum.photos/200/300",
+      "no_of_posts": 23,
+      "bio": "Cloud computing is revolutionizing problem-solving and encryption."
     },
     "comments": [
       {
@@ -278,7 +293,9 @@
     ],
     "author": {
       "name": "David Wilson",
-      "image": "https://picsum.photos/200/300"
+      "image": "https://picsum.photos/200/300",
+      "no_of_posts": 23,
+      "bio": "Cloud computing is revolutionizing problem-solving and encryption."
     }
   },
   {
@@ -298,7 +315,9 @@
     ],
     "author": {
       "name": "Eva Martinez",
-      "image": "https://picsum.photos/200/300"
+      "image": "https://picsum.photos/200/300",
+      "no_of_posts": 10,
+      "bio": "genrate random data"
     },
     "comments": [
       {

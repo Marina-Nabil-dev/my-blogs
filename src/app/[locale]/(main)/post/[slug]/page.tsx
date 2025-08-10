@@ -5,6 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import { getPostBySlug } from "@/app/api/posts/apis";
 import { Comments } from "@/app/components/post/Comments";
 import { RelatedPosts } from "@/app/components/post/RelatedPosts";
+import AuthorInfoCard from "@/app/components/AuthorInfoCard";
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -34,31 +35,42 @@ export default function PostPage({ params }: BlogPostPageProps) {
   if (!post) return <p>Post not found</p>;
 
   return (
-    <main className="flex mt-10 bg-gray-50 dark:bg-gray-900">
-      <article className="py-8">
-        <BlogPostHeader
-          title={post.title}
-          author={{
-            name: post.author.name || "Anonymous",
-            avatar: post.author.image || "/default-avatar.png",
-          }}
-          publishedAt={post.created_at}
-          readTime={`${post.time_to_read} min read`}
-          categories={[post.category]}
-          featuredImage={post.image}
-          tags={post.tags}
-        />
+    <>
+      <div className="bg-gray-50">
+        <main className="flex mt-10 bg-gray-50 dark:bg-gray-900">
+          <div className="flex ">
+            <article className="py-8">
+              <BlogPostHeader
+                title={post.title}
+                author={{
+                  name: post.author.name || "Anonymous",
+                  avatar: post.author.image || "/default-avatar.png",
+                }}
+                publishedAt={post.created_at}
+                readTime={`${post.time_to_read} min read`}
+                categories={[post.category]}
+                featuredImage={post.image}
+                tags={post.tags}
+              />
 
-        <div className="px-4 py-8 mx-auto w-full max-w-4xl">
-          <div className="max-w-none prose dark:prose-invert">
-            {post.content}
+              <div className="px-4 py-8 mx-auto w-full max-w-4xl">
+                <div className="max-w-none prose dark:prose-invert">
+                  {post.content}
+                </div>
+              </div>
+            </article>
           </div>
+          <div className="sticky grid mt-30 ml-20 h-1/4">
+            <AuthorInfoCard author={post.author} />
+            <div>
+              <Comments postSlug={post.slug} comments={post.comments} />
+            </div>
+          </div>
+        </main>
+        <div className="w-2/4">
+          <RelatedPosts post={post} />
         </div>
-        <Comments postSlug={post.slug} comments={post.comments} />
-      </article>
-      <div className="w-1/3" style={{ width: "300px" }}>
-        <RelatedPosts post={post} />
       </div>
-    </main>
+    </>
   );
 }

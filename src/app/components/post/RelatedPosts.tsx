@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { formatDate } from "@/lib/utils";
@@ -17,7 +18,8 @@ export function RelatedPosts({ post }: RelatedPostsProps) {
   } = useQuery({
     queryKey: ["relatedPosts", post.slug],
     queryFn: async () => {
-      const result = await getRelatedPosts(post.slug, post.category);
+      const result = await getRelatedPosts(post.slug);
+
       return result;
     },
   });
